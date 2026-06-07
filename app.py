@@ -41,8 +41,8 @@ def home():
     ]
 
     logos_row = [
-        "Microsoft (ISD)", "ARM Holdings", "DBRS Morningstar", "London Stock Exchange Group",
-        "Nando's", "Indurent (Blackstone)",
+        "ZA/UM", "McKinsey", "XGENIA", "DSM",
+        "Zuvu.ai", "Dark Math Games",
     ]
 
     # Pick 3 case studies for the home strip — one public-sector, one Nordic health, one enterprise

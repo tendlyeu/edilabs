@@ -20,4 +20,11 @@ TEAM = [
         "linkedin": "https://www.linkedin.com/in/danielraissar/",
         "initials": "DR",
     },
+    {
+        "name": "Henrik Aavik",
+        "role": "AI Automation Architect",
+        "bio": "AI automation specialist turning manual business processes into scalable, repeatable workflows. CEO at Tendly, AI Consultant at Amperly. Deep expertise in AI regulation, cybersecurity, and enterprise AI deployment.",
+        "linkedin": "https://www.linkedin.com/in/henrikaavik/",
+        "initials": "HA",
+    },
 ]

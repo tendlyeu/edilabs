@@ -41,7 +41,7 @@ def home():
     ]
 
     logos_row = [
-        "ZA/UM", "McKinsey", "DSM",
+        "Tendly", "McKinsey", "DSM",
         "AMA", "Church of Finland",
     ]
 

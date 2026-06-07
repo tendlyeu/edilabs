@@ -1,7 +1,7 @@
 """
-Shared FastHTML components for the Predictive Labs landing site.
+Shared FastHTML components for the EDI Labs landing site.
 
-Design tokens come from Tailwind via CDN with a dark-first palette extended in
+Design tokens come from Tailwind via CDN with a light palette extended in
 a small inline config block. Custom CSS for the three.js canvas container and
 scroll-reveal lives in static/site.css.
 """
@@ -13,11 +13,9 @@ from fasthtml.common import (
     Video, Source,
 )
 
-SITE_NAME = "Predictive Labs"
-SITE_TAGLINE = "AI for public outcomes."
-CONTACT_EMAIL = "info@predictivelabs.ai"
-GITHUB_URL = "https://github.com/predictivelabsai"
-LINKEDIN_URL = "https://www.linkedin.com/company/predictive-labs-ltd/"
+SITE_NAME = "EDI Labs"
+SITE_TAGLINE = "European Digital Intelligence."
+CONTACT_EMAIL = "info@edilabs.tech"
 
 NAV_ITEMS = [
     ("Platform", "/platform"),
@@ -40,10 +38,10 @@ tailwind.config = {
   theme: {
     extend: {
       colors: {
-        bg: { DEFAULT: '#0D2A70', elevated: '#163A8C', raised: '#1F4BAC' },
-        ink: { DEFAULT: '#F5F5F7', muted: '#C2CEE8', dim: '#95A5D1' },
-        line: { DEFAULT: '#2B4A8E', bright: '#3A60B2' },
-        accent: { DEFAULT: '#5EEAD4', dim: '#1E3A3A', deep: '#134E4A' },
+        bg: { DEFAULT: '#FFFFFF', elevated: '#F8FAFC', raised: '#F1F5F9' },
+        ink: { DEFAULT: '#0F172A', muted: '#475569', dim: '#94A3B8' },
+        line: { DEFAULT: '#E2E8F0', bright: '#CBD5E1' },
+        accent: { DEFAULT: '#0D9488', dim: '#CCFBF1', deep: '#134E4A' },
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -256,8 +254,6 @@ def Footer_():
         ("Company", [
             ("Team", "/team"),
             ("Contact", "/contact"),
-            ("GitHub", GITHUB_URL),
-            ("LinkedIn", LINKEDIN_URL),
         ]),
     ]
 
@@ -284,16 +280,9 @@ def Footer_():
                     ),
                     P(SITE_TAGLINE, cls="text-ink-muted text-sm max-w-xs mb-5 leading-relaxed"),
                     P(
-                        "UK: Predictive Labs Ltd · Co. 14857334", NotStr("<br>"),
-                        "155 Minories Street, Suite 275", NotStr("<br>"),
-                        "London, EC3N 1AD", NotStr("<br>"),
-                        "United Kingdom",
-                        cls="text-ink-dim text-xs leading-relaxed mb-3",
-                    ),
-                    P(
-                        "Estonia: Manmouna OÜ · Registry code 16289310", NotStr("<br>"),
-                        "Teelise tn 10", NotStr("<br>"),
-                        "Tallinn, 10916", NotStr("<br>"),
+                        "Fofefa OÜ · Registry code 12147731", NotStr("<br>"),
+                        "Masina tn 20, Kesklinna linnaosa", NotStr("<br>"),
+                        "10113 Tallinn, Harju maakond", NotStr("<br>"),
                         "Estonia",
                         cls="text-ink-dim text-xs leading-relaxed",
                     ),
@@ -302,10 +291,8 @@ def Footer_():
                 cls="grid grid-cols-2 md:grid-cols-4 gap-10",
             ),
             Div(
-                Div(f"© {__import__('datetime').datetime.now().year} Predictive Labs Ltd.", cls="text-ink-dim text-xs"),
+                Div(f"© {__import__('datetime').datetime.now().year} Fofefa OÜ.", cls="text-ink-dim text-xs"),
                 Div(
-                    A("GitHub", href=GITHUB_URL, cls="text-ink-dim text-xs hover:text-accent mr-4"),
-                    A("LinkedIn", href=LINKEDIN_URL, cls="text-ink-dim text-xs hover:text-accent mr-4"),
                     A(CONTACT_EMAIL, href=f"mailto:{CONTACT_EMAIL}", cls="text-ink-dim text-xs hover:text-accent break-all"),
                     cls="flex items-center flex-wrap gap-y-2",
                 ),
@@ -353,10 +340,10 @@ def page(title: str, current_path: str = "/", *content, head_extra=None, body_ex
 
 # ---------- Higher-level building blocks ----------
 
-def Hero(*, eyebrow="AI for public outcomes", headline=None, lede=None, ctas=None, canvas=True, tall=True):
-    headline = headline or (Span("Decisions made "), Span("with evidence,", cls="text-accent"), Span(" at the scale of the public good."))
+def Hero(*, eyebrow="European Digital Intelligence", headline=None, lede=None, ctas=None, canvas=True, tall=True):
+    headline = headline or (Span("Intelligence "), Span("engineered", cls="text-accent"), Span(" for European institutions."))
     lede = lede or (
-        "Predictive Labs builds AI systems for European public services — in ",
+        "EDI Labs builds AI systems for European public services — in ",
         SectorLink("health"), ", ",
         SectorLink("defense"), ", ",
         SectorLink("public management"), " and ",
@@ -387,7 +374,7 @@ def Hero(*, eyebrow="AI for public outcomes", headline=None, lede=None, ctas=Non
         Div(
             video_div,
             canvas_div,
-            Div(cls="absolute inset-0 z-20 bg-gradient-to-b from-bg/40 via-transparent to-bg pointer-events-none"),
+            Div(cls="absolute inset-0 z-20 bg-gradient-to-b from-bg/60 via-bg/30 to-bg pointer-events-none"),
             Div(
                 Eyebrow(eyebrow),
                 H1(*headline if isinstance(headline, tuple) else [headline], cls="mt-5 md:mt-6 text-[40px] sm:text-5xl md:text-7xl lg:text-[84px] font-medium tracking-tightest text-ink leading-[1.05] md:leading-[1.02] max-w-5xl"),
@@ -402,7 +389,7 @@ def Hero(*, eyebrow="AI for public outcomes", headline=None, lede=None, ctas=Non
         ),
         Div(
             Div(
-                Div("AI for public outcomes", cls="text-[11px] md:text-xs font-mono tracking-[0.18em] uppercase text-ink-dim"),
+                Div("European Digital Intelligence", cls="text-[11px] md:text-xs font-mono tracking-[0.18em] uppercase text-ink-dim"),
                 Div(
                     Span("Active engagements across ", cls="text-ink-muted text-xs md:text-sm"),
                     Span("6 ", cls="text-accent text-xs md:text-sm font-mono"),

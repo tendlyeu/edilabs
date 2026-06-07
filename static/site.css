@@ -1,10 +1,10 @@
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 html, body {
-  background: #0D2A70;
-  color: #F5F5F7;
+  background: #FFFFFF;
+  color: #0F172A;
   -webkit-tap-highlight-color: transparent;
 }
 body {
@@ -30,28 +30,28 @@ body {
   font-family: 'JetBrains Mono', ui-monospace, monospace;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #B4C0E0;
+  color: #475569;
   border-radius: 9999px;
-  border: 1px solid #2B4A8E;
+  border: 1px solid #E2E8F0;
   background: transparent;
   transition: all 150ms ease;
   cursor: pointer;
 }
 .signal-tab:hover {
-  color: #F5F5F7;
-  border-color: #3A60B2;
+  color: #0F172A;
+  border-color: #CBD5E1;
 }
 .signal-tab-active {
-  color: #0D2A70;
-  background: #5EEAD4;
-  border-color: #5EEAD4;
+  color: #FFFFFF;
+  background: #0D9488;
+  border-color: #0D9488;
 }
 
 /* Plotly chart container */
 .chart-frame {
-  border: 1px solid #2B4A8E;
+  border: 1px solid #E2E8F0;
   border-radius: 1rem;
-  background: #163A8C;
+  background: #F8FAFC;
   padding: 0.75rem;
   min-height: 360px;
 }
@@ -73,14 +73,14 @@ body {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar { width: 10px; height: 10px; }
-::-webkit-scrollbar-track { background: #0D2A70; }
-::-webkit-scrollbar-thumb { background: #2B4A8E; border-radius: 10px; }
-::-webkit-scrollbar-thumb:hover { background: #3A60B2; }
+::-webkit-scrollbar-track { background: #F8FAFC; }
+::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
 
 /* Selection */
 ::selection {
-  background: #5EEAD4;
-  color: #0D2A70;
+  background: #CCFBF1;
+  color: #134E4A;
 }
 
 /* Small-screen polish */

@@ -1,11 +1,11 @@
-// Predictive Labs hero — wireframe globe with European city dots + flowing arcs.
-// Slow, restrained, dark-first. Capped at 30fps. Respects prefers-reduced-motion.
+// EDI Labs hero — wireframe globe with European city dots + flowing arcs.
+// Slow, restrained, light-first. Capped at 30fps. Respects prefers-reduced-motion.
 
 import * as THREE from 'https://unpkg.com/three@0.160.0/build/three.module.js';
 
-const TEAL = 0x5eead4;
-const TEAL_DIM = 0x134e4a;
-const INK_DIM = 0x6b7280;
+const TEAL = 0x0d9488;
+const TEAL_DIM = 0x5eead4;
+const INK_DIM = 0x94a3b8;
 
 // European capitals + a few operational cities (lat, lon)
 const CITIES = [
@@ -99,7 +99,7 @@ function init() {
   globe.add(new THREE.LineSegments(edges, wireMat));
 
   // Faint filled sphere to occlude back-facing arcs (subtle depth)
-  const fillMat = new THREE.MeshBasicMaterial({ color: 0x0d2a70, transparent: true, opacity: 0.85 });
+  const fillMat = new THREE.MeshBasicMaterial({ color: 0xf8fafc, transparent: true, opacity: 0.85 });
   globe.add(new THREE.Mesh(sphereGeom, fillMat));
 
   // City dots

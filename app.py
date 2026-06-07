@@ -1,7 +1,7 @@
 """
-Predictive Labs — multipage FastHTML landing site (v2).
+EDI Labs — multipage FastHTML landing site.
 
-Dark, palantir-inspired, public-sector first. Content lives in content/*.py;
+Light, professional, public-sector first. Content lives in content/*.py;
 routes are thin composition layers over components.py primitives.
 """
 
@@ -13,7 +13,7 @@ from fasthtml.common import (
 from components import (
     page, Hero, Pillar, MetricTile, CaseStudyCard, CTASection, NewsSection,
     Section_, Heading, Eyebrow, Pill, Button_, SectorLink,
-    CONTACT_EMAIL, GITHUB_URL, LINKEDIN_URL,
+    CONTACT_EMAIL,
 )
 from content.case_studies import ALL as ALL_CASES, BID_DERIVED, NAMED_PRECEDENTS
 from content.team import TEAM
@@ -49,7 +49,7 @@ def home():
     home_cases = [c for c in ALL_CASES if c["id"] in ("uk-traffic-od", "nordic-health-rwd", "microsoft-isd")]
 
     return page(
-        "AI for public outcomes",
+        "European Digital Intelligence",
         "/",
         Hero(),
 
@@ -633,7 +633,7 @@ def contact():
         Section_(
             Eyebrow("Contact"),
             Heading(1, "Brief us on the programme.", cls="mt-5 max-w-4xl"),
-            P("We work with public-sector buyers across the UK, the Nordics, the Benelux and the Baltics, and selectively with regulated enterprise clients. Tell us the problem — we'll tell you if we can help.",
+            P("We work with public-sector buyers across the Nordics, the Benelux and the Baltics, and selectively with regulated enterprise clients. Tell us the problem — we'll tell you if we can help.",
               cls="mt-8 text-xl text-ink-muted max-w-3xl leading-relaxed"),
             cls="pt-24",
         ),
@@ -652,27 +652,12 @@ def contact():
                 ),
                 Div(
                     Div(
-                        H3("Estonian entity", cls="text-sm font-mono tracking-widest uppercase text-ink-muted mb-3"),
-                        P("Manmouna OÜ", cls="text-ink"),
-                        P("Teelise tn 10, Nõmme linnaosa", cls="text-ink-muted"),
-                        P("Tallinn, 10916", cls="text-ink-muted"),
+                        H3("Registered entity", cls="text-sm font-mono tracking-widest uppercase text-ink-muted mb-3"),
+                        P("Fofefa OÜ", cls="text-ink"),
+                        P("Masina tn 20, Kesklinna linnaosa", cls="text-ink-muted"),
+                        P("10113 Tallinn, Harju maakond", cls="text-ink-muted"),
                         P("Estonia", cls="text-ink-muted"),
-                        P("Registry code 16289310", cls="text-ink-dim text-sm mt-3 font-mono"),
-                        cls="mb-10",
-                    ),
-                    Div(
-                        H3("Registered office", cls="text-sm font-mono tracking-widest uppercase text-ink-muted mb-3"),
-                        P("Predictive Labs Ltd", cls="text-ink"),
-                        P("155 Minories Street, Suite 275", cls="text-ink-muted"),
-                        P("London, EC3N 1AD", cls="text-ink-muted"),
-                        P("United Kingdom", cls="text-ink-muted"),
-                        P("Company no. 14857334", cls="text-ink-dim text-sm mt-3 font-mono"),
-                        cls="mb-10",
-                    ),
-                    Div(
-                        H3("Channels", cls="text-sm font-mono tracking-widest uppercase text-ink-muted mb-3"),
-                        A("GitHub", href=GITHUB_URL, target="_blank", cls="block text-ink hover:text-accent mb-2"),
-                        A("LinkedIn", href=LINKEDIN_URL, target="_blank", cls="block text-ink hover:text-accent mb-2"),
+                        P("Registry code 12147731", cls="text-ink-dim text-sm mt-3 font-mono"),
                     ),
                     cls="p-10 rounded-2xl bg-bg-elevated border border-line",
                 ),

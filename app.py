@@ -42,7 +42,7 @@ def home():
 
     logos_row = [
         "Tendly", "McKinsey", "DSM",
-        "AMA", "Church of Finland",
+        "Advanced Materials Applications", "Church of Finland",
     ]
 
     # Pick 3 case studies for the home strip — one public-sector, one Nordic health, one enterprise

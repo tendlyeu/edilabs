@@ -41,8 +41,8 @@ def home():
     ]
 
     logos_row = [
-        "ZA/UM", "McKinsey", "XGENIA", "DSM",
-        "Zuvu.ai", "Dark Math Games", "Church of Finland",
+        "ZA/UM", "McKinsey", "DSM",
+        "AMA", "Church of Finland",
     ]
 
     # Pick 3 case studies for the home strip — one public-sector, one Nordic health, one enterprise
